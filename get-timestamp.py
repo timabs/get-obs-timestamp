@@ -16,11 +16,12 @@ def check_file_setup(file_name):
             file.write('Timestamps: \n')
     with open(file_name, 'r') as file:
         lines = file.readlines()
-    if lines and lines[0].strip() == "Timestamps":
+    if lines and lines[0].strip() == "Timestamps:":
         return
-    lines.insert(0, "Timestamps: \n")
-    with open(file_name, 'w') as file:
-        file.writelines(lines)
+    else:
+        lines.insert(0, "Timestamps: \n")
+        with open(file_name, 'w') as file:
+            file.writelines(lines)
 
 def get_date():
     today = datetime.today()

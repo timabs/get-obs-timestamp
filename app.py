@@ -6,7 +6,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-cl = obs.ReqClient(host='localhost', port=3000, password='morsey', timeout=3)
+cl = obs.ReqClient(host='localhost', port=3000, password='', timeout=3)
 
 # Setup for file
 timestamps_file = 'clips.txt'

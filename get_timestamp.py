@@ -70,6 +70,6 @@ def get_and_write_timestamp():
     timestamp_text = get_timestamp()
     write_timestamp_to_file(timestamp_text)
 check_json(json_file)
-print(f'Press ALT + T to grab your timestamp. Press ESC to exist the program')
+print(f'Press ALT + T to grab your timestamp. Press ESC to exit the program')
 keyboard.add_hotkey('alt + t', get_and_write_timestamp)
 keyboard.wait('esc')

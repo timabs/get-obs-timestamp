@@ -3,9 +3,15 @@ import os
 import keyboard
 import json
 from datetime import datetime
+from dotenv import load_dotenv
 
-# Setup for WebSocket connection to OBS
-cl= obs.ReqClient(host='localhost', port=3000, password='', timeout=3)
+
+load_dotenv()
+
+obs_host = os.getenv('OBS_HOST')
+obs_port = os.getenv('OBS_PORT')
+obs_password = os.getenv('OBS_PASSWORD')
+cl= obs.ReqClient(host=obs_host, port=int(obs_port), password=obs_password, timeout=3)
 
 # Setup for file
 timestamps_file  = 'clips.txt'

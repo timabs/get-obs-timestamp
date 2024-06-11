@@ -2,3 +2,4 @@
 /to-do.txt
 /date.json
 .venv/
+.env
